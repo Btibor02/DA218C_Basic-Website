@@ -79,11 +79,6 @@ p {
     height: auto;
 }
 
-.cartImg {
-    width: 2.5rem;
-    height: auto;
-}
-
 .card {
     max-width: 20rem;
     height: auto;
@@ -91,19 +86,26 @@ p {
     transition: 0.3s;
     border-radius: 5px;
     background-color: #e0ddcc;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
-  .cardImg {
+  .card img {
     width: 10rem;
     height: auto;
-    text-align: center;
+  }
+
+  .cardImage {
+    display: flex;
+    justify-content: center;
+    
   }
   
   .cardData {
-    padding: 2px 16px;
+    padding-left: 0.5rem;
   }
 

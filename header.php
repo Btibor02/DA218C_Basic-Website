@@ -5,7 +5,9 @@ echo "
         <a class='storeNameLink' href='home.php'> <h1> Leaf & Spine </h1> </a>
     </div>
     <div class='cart'>
-        <a href='cart.php'> <img src='cart.png' class='cartImg'> </a>
+        <form action='cart.php' method='GET'>
+            <input type='image' src='cart.png' alt='View Cart' style='width: 2.5rem; height: 2.5rem;'>
+        </form>
     </div>
 ";
 ?>

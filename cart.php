@@ -14,7 +14,14 @@
         <div class="mainMenu">
         </div>
         <div class="mainContent">
-            <h2>test</h2>
+        <?php
+            session_start();
+            if (empty($_SESSION['cart'])) {
+                echo "Cart is empty." ;
+            } else {
+                echo "Books in cart: " . implode(", ", $_SESSION['cart']);
+            }
+        ?>
         </div>
         <div class="footer">
 

@@ -16,6 +16,8 @@
         </div>
         <div class="mainContent">
             <?php
+                session_start();
+
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
@@ -27,18 +29,24 @@
                 die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "SELECT author, title, category, summary, price FROM books";
+                $sql = "SELECT id, author, title, category, summary, price FROM books";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "<div class='card'>
-                                <img class='cardImg' src='placeholder.png' alt='Book Cover' />
+                                <div class='cardImage'>
+                                    <img src='placeholder.png' alt='Book Cover' />
+                                </div>
                                 <div class='cardData'>
-                                    <h4> " . $row["author"]. ": " . $row["title"]. "</h4>
+                                    <h3><b> " . $row["author"]. ": " . $row["title"]. "</b></h3>
                                     <p> Category: " . $row["category"]." </p>
                                     <p> " . $row["summary"]." </p>
-                                    <p> " . $row["price"]." SEK</p>
+                                    <p style='font-size: 1.2rem;'><b> " . $row["price"]." SEK </b></p>
+                                    <form action='addToCart.php' method='POST'>
+                                        <input type='hidden' name='bookID' value='". $row["id"]. "'/>
+                                        <button type='submit'>Add to cart</button>
+                                    </form>
                                 </div>
                             </div>";
                     }
@@ -52,7 +60,7 @@
             <?php include 'footer.php'; ?>
         </div>
 
-    </div>
-    
+    </div>  
 </body>
+
 </html>
