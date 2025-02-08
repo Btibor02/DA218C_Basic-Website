@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.layout {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "mainMenu mainContent"
+    "footer footer";
+    background-color: #FAF6E3;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+}
+
+
+.layout > div.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #D8DBBD;
+    height: 8rem;
+}
+
+.layout > div.mainMenu {
+    grid-area: mainMenu;
+}
+
+.layout > div.mainContent {
+    grid-area: mainContent;
+    
+}
+
+.layout > div.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    background-color: #D8DBBD;
+    height: 5rem;
+}
+
+.storeName {
+    padding-left: 1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.storeNameLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cart {
+    padding-right: 4rem;
+}
+
+.logo {
+    width: 12rem;
+    height: auto;
+}
+
+.cartImg {
+    width: 2.5rem;
+    height: auto;
+}
