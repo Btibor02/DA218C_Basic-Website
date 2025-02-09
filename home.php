@@ -18,17 +18,7 @@
             <?php
                 session_start();
 
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "bookstore";
-
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                
-                if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-                }
-
+                include('db.php');
                 $sql = "SELECT id, author, title, category, summary, price FROM books";
                 $result = $conn->query($sql);
 
