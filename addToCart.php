@@ -7,8 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['cart'] = [];
     }
 
-    if (!in_array($id, $_SESSION['cart'])) {
-        $_SESSION['cart'][] = $id;
+    if (!isset($_SESSION['cart'][$id])) {
+        $_SESSION['cart'][$id] = 1; // Add as new item with quantity 1
+    } else {
+        $_SESSION['cart'][$id]++; // Increase quantity if already in cart
     }
 }
 
