@@ -37,7 +37,7 @@ button {
 }
 
 
-.layout > div.header {
+.header {
     grid-area: header;
     display: flex;
     align-items: center;
@@ -47,14 +47,14 @@ button {
     height: 8rem;
 }
 
-.layout > div.mainContent {
+.mainContent {
     background-color: #FAF6E3;
     grid-area: mainContent;
     width: 100%;
     
 }
 
-.layout > div.footer {
+.footer {
     grid-area: footer;
     display: flex;
     justify-content: center;

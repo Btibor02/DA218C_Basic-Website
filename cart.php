@@ -17,6 +17,7 @@
                 <?php
                     session_start();
                     include('db.php');
+                    
                     if (empty($_SESSION['cart'])) {
                         echo "<h2>Cart is empty.</h2>";
                     } else {
