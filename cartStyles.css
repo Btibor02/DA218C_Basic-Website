@@ -10,6 +10,20 @@ p {
     padding: 0;
 }
 
+button {
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+}
+
 .layout {
     display: grid;
     grid-template-areas: 
@@ -46,6 +60,10 @@ p {
     justify-content: center;
     background-color: #D8DBBD;
     height: 5rem;
+}
+
+.footer p {
+    padding-top: 1rem;
 }
 
 .storeName {
@@ -87,6 +105,10 @@ p {
     padding-bottom: 1rem;
 }
 
+.cartMain h2 {
+    padding-left: 2rem;
+}
+
 .card {
     display: grid;
     grid-template-areas: 
@@ -124,6 +146,13 @@ p {
 
 }
 
+#decrease,
+#increase {
+    color: black;
+    font-size: 1rem;
+    padding: 2px 5px;
+}
+
 .cardInfo {
     grid-area: info;
 }
@@ -146,3 +175,37 @@ p {
     text-align: left;
 }
 
+#remove {
+    background: linear-gradient(135deg, #ff4b4b, #b30000);
+}
+
+#remove:hover {
+    background: linear-gradient(135deg, #c73a3a, #530202);
+}
+
+.cartButtons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.cartButtons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#clear {
+    background: linear-gradient(135deg, #ff4b4b, #b30000);
+}
+
+#clear:hover {
+    background: linear-gradient(135deg, #c73a3a, #530202);
+}
+
+#checkout {
+    background: linear-gradient(135deg, #28a745, #006d1f);
+}
+
+#checkout:hover {
+    background: linear-gradient(135deg, #1e7230, #012c0d);
+}

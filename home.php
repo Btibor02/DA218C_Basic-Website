@@ -12,7 +12,7 @@
             <?php include 'header.php'; ?>
         </div>
         <div class="mainMenu">
-            <h1>Teszt-----------</h1>
+            <h1>Categories</h1>
         </div>
         <div class="mainContent">
             <?php

@@ -36,6 +36,9 @@ p {
 .layout > div.mainMenu {
     grid-area: mainMenu;
     background-color: #FAF6E3;
+    margin: 1rem;
+    margin-right: 3rem;
+    width: 100%;
 }
 
 .layout > div.mainContent {
@@ -56,6 +59,7 @@ p {
     justify-content: center;
     background-color: #D8DBBD;
     height: 5rem;
+    padding-top: 1rem;
 }
 
 .storeName {
